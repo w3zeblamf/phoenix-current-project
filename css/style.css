@@ -258,11 +258,40 @@ p {
 
 /* ## EO About Page Style ## */
 
+/* ## Contact Page Style ## */
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid
+}
+
+#contact-form textarea {
+  height: 200px;
+}
+/* ## EO Contact Page Style ## */
+
 /* Main Footer */
 #main-footer {
   text-align: center;
   background: #444;
   color: #fff;
   padding: 20px;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
 }
 /* EO Main Footer */
