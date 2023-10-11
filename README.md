@@ -1,5 +1,5 @@
 
-### Project: Web Dev testing enviroment
+### Project: Web Dev testing environment
 
 #### Screenshot:
 
