@@ -1,14 +1,9 @@
+## Web Dev testing environment
 
-### Project: Web Dev testing environment
-
-#### Screenshot:
-
-<p style= "align:center">
-  
-</p>
-
+### Project: Resposive webpage using float property
 
 #### Reference web pages:
 
-- https://developer.mozilla.org/en-US/docs/Web
-- https://developer.mozilla.org/es/docs/Web
+- [MDN Web Docs / Float](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
+- [MDN Web Docs / CSS / Float](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+
