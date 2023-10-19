@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-with, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <!-- Font Awesome CDN-->
     <link
       rel="stylesheet"
@@ -12,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <!-- EO Font Awesome CDN-->
+    <link rel="stylesheet" href="css/lightbox.min.css" />
     <link rel="stylesheet" href="css/utilities.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -147,21 +149,41 @@
         </header>
         <div class="row">
           <div class="column">
-            <img src="images/cases/cases1.jpg" alt="cases 1" />
-            <img src="images/cases/cases2.jpg" alt="cases 2" />
+           <a href="images/cases/cases1.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases1.jpg" alt="cases 1" />
+           </a>
+             <a href="images/cases/cases2.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases2.jpg" alt="cases2" />
+           </a>
           </div>
-          <div class="column">
-            <img src="images/cases/cases3.jpg" alt="cases 3" />
-            <img src="images/cases/cases4.jpg" alt="cases 4" />
+          
+           <div class="column">
+           <a href="images/cases/cases3.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases3.jpg" alt="cases3" />
+           </a>
+             <a href="images/cases/cases4.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases4.jpg" alt="cases4" />
+           </a>
           </div>
-          <div class="column">
-            <img src="images/cases/cases5.jpg" alt="cases 5" />
-            <img src="images/cases/cases6.jpg" alt="cases 6" />
+          
+           <div class="column">
+           <a href="images/cases/cases5.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases5.jpg" alt="cases5" />
+           </a>
+             <a href="images/cases/cases6.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases6.jpg" alt="cases6" />
+           </a>
           </div>
-          <div class="column">
-            <img src="images/cases/cases7.jpg" alt="cases 7" />
-            <img src="images/cases/cases8.jpg" alt="cases 8" />
+          
+           <div class="column">
+           <a href="images/cases/cases7.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases7.jpg" alt="cases7" />
+           </a>
+             <a href="images/cases/cases8.jpg" data-lightbox="cases" data-title="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">
+              <img src="images/cases/cases8.jpg" alt="cases8" />
+           </a>
           </div>
+          
         </div>
       </section>
       <!-- EO Cases Section -->
@@ -278,7 +300,7 @@
     <footer class="footer bg-dark">
       <div class="social">
         <a href="#"><i class="fab fa-facebook fa-2x"> </i></a>
-        <a href="#"><i class="fab fa-xtwitter fa-2x"> </i></a>
+        <a href="#"><i class="fab fa-x-twitter fa-2x"> </i></a>
         <a href="#"><i class="fab fa-youtube fa-2x"> </i></a>
         <a href="#"><i class="fab fa-linkedin fa-2x"> </i></a>
       </div>
@@ -286,14 +308,14 @@
     </footer>
     <!-- EO Footer Section -->
 
-   <!-- Jquery CDN -->
+    <!-- Jquery CDN -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"></script>
+    <!-- EO Jquery CDN -->
+    <script src="js/lightbox.min.js"></script>
     <script>
-      <!-- EO Jquery CDN -->
-      
       const navbar = document.getElementById("navbar");
       let scrolled = false;
 
@@ -312,6 +334,22 @@
           scrolled = false;
         }
       };
+
+      // Smooth Scrolling
+      $("#navbar a, .btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top - 100
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>

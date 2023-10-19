@@ -20,7 +20,7 @@
     <!--Header Section -->
     <header class="hero blog">
       <!-- Navbar Container -->
-      <div id="navbar" class="navbar">
+      <div id="navbar" class="navbar top">
         <!-- Logo -->
         <h1 class="logo">
           <span class="text-primary">
@@ -86,5 +86,26 @@
       <p>Copyright &copy; 2020 - EdgeLedger</p>
     </footer>
     <!-- EO Footer Section -->
+    
+    <script>
+       const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
   </body>
 </html>
