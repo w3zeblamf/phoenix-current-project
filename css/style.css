@@ -56,7 +56,9 @@ img {
 }
 
 .navbar.top {
+  /*.navbar.top= The 'navbar' class contains the 'top' class, they must be joined to functioning */
   background: transparent;
+  /*https://stackoverflow.com/questions/17391364/what-is-the-difference-between-the-selectors-class-class-and-class-class*/
 }
 
 .navbar a {
@@ -123,6 +125,7 @@ img {
 .hero.blog {
   background: url('../images/home/blog.jpg') no-repeat center center/cover;
   height: 30vh;
+  /*https://stackoverflow.com/questions/17391364/what-is-the-difference-between-the-selectors-class-class-and-class-class*/
 }
 /* EO Header */
 
@@ -237,8 +240,9 @@ img {
 
 /* Media Queries */ 
 
-/* Mobile */
+/* Mobile  */
 @media(max-width: 768px) {
+  /* max-width: 768px / Any device from 768px and below it. */
   .navbar {
     flex-direction: column;
     height: 120px;
